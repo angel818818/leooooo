@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>金門三天兩夜輕旅行 - 行程指南 (安全防護版)</title>
+    <title>金門三天兩夜輕旅行 - 完整行程與智慧記帳</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans TC', sans-serif;
@@ -40,28 +43,34 @@
         .modal-box {
             transition: transform 0.25s ease-out;
         }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-slate-700 pb-32 scroll-smooth">
     <div class="dot-bg-overlay"></div>
 
+    <!-- App Header -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100 px-4 py-4 text-center">
         <div class="inline-block bg-[#3B7AAE]/10 text-[#3B7AAE] text-xs font-bold px-3 py-1 rounded-full mb-1">
-            <i class="fa-solid fa-compass mr-1"></i> SUMMER TRIP
+            <i class="fa-solid fa-compass mr-1"></i> KINMEN TRIP
         </div>
         <h1 class="text-xl font-bold text-slate-800 tracking-wide">金門戰地風情與秘境探訪</h1>
-        <p class="text-xs text-slate-500 mt-0.5">3 Days & 2 Nights Travel Itinerary</p>
+        <p class="text-xs text-slate-500 mt-0.5">3 Days & 2 Nights Full Itinerary</p>
     </header>
 
+    <!-- Main Container -->
     <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
 
+        <!-- 智慧功能主控鈕 -->
         <div class="flex gap-3">
             <button onclick="openAccountingModal()" class="flex-1 bg-gradient-to-r from-[#3B7AAE] to-blue-500 text-white font-bold py-3 px-4 rounded-2xl shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform text-sm">
                 <i class="fa-solid fa-calculator text-base"></i>
-                <span>團隊智慧記帳 / 結算</span>
+                <span>團隊智慧記帳 / 彈性結算系統</span>
             </button>
         </div>
 
+        <!-- ==================== DAY 1 ==================== -->
         <section id="day1" class="space-y-4">
             <div class="flex items-center justify-between bg-[#3B7AAE] text-white px-5 py-3.5 rounded-2xl shadow-sm">
                 <div class="flex items-center gap-3">
@@ -75,6 +84,7 @@
             </div>
 
             <div class="space-y-4">
+                <!-- D1 行程 1 -->
                 <div class="korean-card bg-white p-5 space-y-3" id="item-d1-1">
                     <div class="flex justify-between items-start">
                         <div class="flex items-center gap-2">
@@ -90,11 +100,10 @@
                         <div class="text-slate-500 card-tips-photo"><i class="fa-solid fa-camera text-[#3B7AAE]/70 mr-1"></i><strong>拍照：</strong>飛機靠窗座可拍金門俯瞰群島。</div>
                         <div class="text-slate-500 card-tips-park"><i class="fa-solid fa-circle-info text-[#3B7AAE]/70 mr-1"></i><strong>停車：</strong>台中機場航廈旁有公有平面停車場。</div>
                     </div>
-                    <div class="text-right pt-1">
-                        <button onclick="checkPasswordAndEdit('item-d1-1')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 hover:bg-[#3B7AAE]/10 px-3 py-1.5 rounded-full font-medium transition-colors"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button>
-                    </div>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-1')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
                 </div>
 
+                <!-- D1 行程 2 -->
                 <div class="korean-card bg-white p-5 space-y-3" id="item-d1-2">
                     <div class="flex justify-between items-start">
                         <div class="flex items-center gap-2">
@@ -103,16 +112,18 @@
                         </div>
                         <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">11:30</span>
                     </div>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[10px] bg-red-50 text-red-500 font-bold px-2 py-0.5 rounded-full">#必吃</span>
+                    </div>
                     <p class="text-sm text-slate-600 card-desc">享用在地著名的酒糟牛肉麵與特色牛肉料理，湯頭濃郁肉質軟嫩。</p>
                     <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-dashed border-slate-100">
-                        <div class="text-slate-500 card-tips-photo"><i class="fa-solid fa-camera text-[#3B7AAE]/70 mr-1"></i><strong>拍照：</strong>紅燒牛肉麵滿鋪肉塊特寫極度誘人。</div>
-                        <div class="text-slate-500 card-tips-park"><i class="fa-solid fa-circle-info text-[#3B7AAE]/70 mr-1"></i><strong>停車：</strong>店家門口與周邊道路路邊皆好停車。</div>
+                        <div class="text-slate-500 card-tips-photo"><i class="fa-solid fa-camera text-[#3B7AAE]/70 mr-1"></i><strong>拍照：</strong>紅燒牛肉麵滿鋪肉塊特寫。</div>
+                        <div class="text-slate-500 card-tips-park"><i class="fa-solid fa-circle-info text-[#3B7AAE]/70 mr-1"></i><strong>停車：</strong>店家門口與周邊道路路邊好停車。</div>
                     </div>
-                    <div class="text-right pt-1">
-                        <button onclick="checkPasswordAndEdit('item-d1-2')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 hover:bg-[#3B7AAE]/10 px-3 py-1.5 rounded-full font-medium transition-colors"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button>
-                    </div>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-2')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
                 </div>
 
+                <!-- D1 行程 3 -->
                 <div class="korean-card bg-white p-5 space-y-3" id="item-d1-3">
                     <div class="flex justify-between items-start">
                         <div class="flex items-center gap-2">
@@ -121,50 +132,365 @@
                         </div>
                         <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">下午行程</span>
                     </div>
-                    <p class="text-sm text-slate-600 card-desc">包含：湖井頭戰史館、沙溪堡極美海景步道、九宮坑道。走入歷史第一線防衛據點。</p>
+                    <div class="flex flex-wrap gap-1"><span class="text-[10px] bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">#必拍</span></div>
+                    <p class="text-sm text-slate-600 card-desc">包含：湖井頭戰史館、沙溪堡（看見海景與絕美木棧道）、九宮坑道（壯觀海軍地下水道）。</p>
                     <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-dashed border-slate-100">
-                        <div class="text-slate-500 card-tips-photo"><i class="fa-solid fa-camera text-[#3B7AAE]/70 mr-1"></i><strong>拍照：</strong>沙溪堡木棧道延伸至涼亭，可完美框住廈門高樓天際線。</div>
-                        <div class="text-slate-500 card-tips-park"><i class="fa-solid fa-circle-info text-[#3B7AAE]/70 mr-1"></i><strong>停車：</strong>各景點均附設專屬免費機汽車停車場。</div>
+                        <div class="text-slate-500 card-tips-photo"><i class="fa-solid fa-camera text-[#3B7AAE]/70 mr-1"></i><strong>拍照：</strong>沙溪堡木棧道延伸涼亭。</div>
+                        <div class="text-slate-500 card-tips-park"><i class="fa-solid fa-circle-info text-[#3B7AAE]/70 mr-1"></i><strong>停車：</strong>各景點均附設專屬免費停車場。</div>
                     </div>
-                    <div class="text-right pt-1">
-                        <button onclick="checkPasswordAndEdit('item-d1-3')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 hover:bg-[#3B7AAE]/10 px-3 py-1.5 rounded-full font-medium transition-colors"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-3')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D1 行程 4 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d1-4">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">下午茶：膩咖啡</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">15:30</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">小金門極具風味的老宅改建咖啡廳，充滿綠意與寧靜的文青角落。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-4')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D1 行程 5 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d1-5">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">晚餐：喜豐樓</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">18:00</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">老字號金門傳統台菜餐廳，高粱嗆蟹、宴菜等功夫菜道地美味。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-5')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D1 行程 6 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d1-6">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">夜遊：水頭聚落</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">夜間</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">欣賞全台最美閩南傳統聚落與極具特色的洋樓建築，夜間點燈後別有風情。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-6')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D1 行程 7 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d1-7">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">宵夜：金城飯店</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">21:30</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">金城市區在地老牌宵夜，熱騰騰的小籠包與小點心撫慰一整天行程。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-7')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D1 行程 8 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d1-8">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-violet-50 text-violet-600 text-xs font-medium px-2.5 py-1 rounded-md border border-violet-100">酒店</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">住宿：海福商務飯店</h3>
+                        </div>
+                        <span class="text-xs font-bold text-violet-600 bg-slate-50 px-2 py-1 rounded-md card-time">住宿</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">生活機能極佳，精緻現代的商務客房提供舒適好眠。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d1-8')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+            </div>
+
+            <!-- Wear & Weather D1 -->
+            <div class="bg-[#3B7AAE]/5 border border-[#3B7AAE]/20 rounded-2xl p-4 space-y-1">
+                <div class="text-xs font-bold text-[#3B7AAE] flex items-center gap-1"><i class="fa-solid fa-shirt"></i> 貼心提醒</div>
+                <p class="text-xs text-slate-600 leading-relaxed">👗 建議穿著好走的運動鞋與薄外套。☀️ 白天紫外線強注意防曬，坑道內體感稍涼。</p>
+            </div>
+        </section>
+
+
+        <!-- ==================== DAY 2 ==================== -->
+        <section id="day2" class="space-y-4">
+            <div class="flex items-center justify-between bg-[#3B7AAE] text-white px-5 py-3.5 rounded-2xl shadow-sm">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl font-black tracking-tighter">D2</span>
+                    <div>
+                        <div class="text-xs opacity-80">次日·戰地古寧頭探秘</div>
+                        <div class="text-sm font-bold">06/28 (日)</div>
                     </div>
                 </div>
+                <span class="text-xs bg-white/20 px-2.5 py-1 rounded-lg border border-white/10">人文史蹟</span>
+            </div>
+
+            <div class="space-y-4">
+                <!-- D2 行程 1 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-1">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">早餐：永春廣東粥</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">晨間</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">燉煮至看不見米粒的粥糜，配上金門在地油條是絕配滋味！</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-1')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 2 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-2">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">翟山坑道</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">上午</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">號稱全台最美A字型戰備水道，水面平靜如鏡，岩壁倒影極度震撼魔幻。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-2')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 3 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-3">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">午餐：喜悅小館</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">11:30</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">深受在地人喜愛的高CP值中式熱炒與家常私房精緻館子。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-3')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 4 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-4">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">北山古洋樓、古寧頭戰史館</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">下午</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">見證古寧頭戰役的歷史遺蹟，古洋樓牆面上仍留有密密麻麻的驚心彈孔。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-4')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 5 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-5">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">下午茶：百花洋樓喫茶</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">15:00</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">在古樸典雅的古厝中西折衷洋樓內喝杯好茶，享受悠閒漫活微醺時光。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-5')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 6 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-6">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">晚餐：記德海鮮餐廳</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">18:00</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">金門代表性海鮮名店！招牌高高粱嗆蟹、生炒沙蟲是在地必吃推薦。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-6')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 7 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-7">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">夜遊後浦小鎮</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">夜間</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">漫步於古意盎然的後浦老街，遊覽清代總兵署與邱良功母代步坊古蹟。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-7')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 8 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-8">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">宵夜：大廟口熱炒</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">22:00</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">廟前廣場露天辦桌體驗，品嚐金門特色炒泡麵與熱炒海鮮夜生活。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d2-8')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D2 行程 9 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d2-9">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-violet-50 text-violet-600 text-xs font-medium px-2.5 py-1 rounded-md border border-violet-100">酒店</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">住宿：海福商務飯店</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">續住同間飯店，無須搬運行李輕鬆放鬆。</p>
+                </div>
+            </div>
+
+            <!-- Wear & Weather D2 -->
+            <div class="bg-[#3B7AAE]/5 border border-[#3B7AAE]/20 rounded-2xl p-4 space-y-1">
+                <div class="text-xs font-bold text-[#3B7AAE] flex items-center gap-1"><i class="fa-solid fa-shirt"></i> 貼心提醒</div>
+                <p class="text-xs text-slate-600 leading-relaxed">👗 適合大地色系或白色系文青穿搭拍照。☀️ 古寧頭戶外多遮蔽物少，請防範中暑。</p>
+            </div>
+        </section>
+
+
+        <!-- ==================== DAY 3 ==================== -->
+        <section id="day3" class="space-y-4">
+            <div class="flex items-center justify-between bg-[#3B7AAE] text-white px-5 py-3.5 rounded-2xl shadow-sm">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl font-black tracking-tighter">D3</span>
+                    <div>
+                        <div class="text-xs opacity-80">尾日·沙美摩洛哥風情</div>
+                        <div class="text-sm font-bold">06/29 (一)</div>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-2.5 py-1 rounded-lg border border-white/10">異國絕景</span>
+            </div>
+
+            <div class="space-y-4">
+                <!-- D3 行程 1 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-1">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">早餐：金許園</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">晨間</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">老牌中式北方麵食早餐，牛肉餡餅及韭菜盒酥脆咬下爆汁。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-1')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D3 行程 2 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-2">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">馬山觀測站、獅山砲陣地</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">上午</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">天下第一哨馬山前線，以及獅山砲陣地極具震撼力的八吋榴砲操演秀。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-2')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D3 行程 3 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-3">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">午餐：新天地海產店</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">11:30</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">口碑極佳的當日新鮮現捕海產熱炒，展現金門純樸在地海鮮風味。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-3')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D3 行程 4 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-4">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-medium px-2.5 py-1 rounded-md border border-emerald-100">景點</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">沙美摩洛哥</h3>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 bg-slate-50 px-2 py-1 rounded-md card-time">下午</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">傳統頹屋形成的土黃色殘壁秘境，充滿中東北非沙漠異國風情。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-4')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D3 行程 5 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-5">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-50 text-amber-600 text-xs font-medium px-2.5 py-1 rounded-md border border-amber-100">食物</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">下午茶：愜意甜點工作室</h3>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 bg-slate-50 px-2 py-1 rounded-md card-time">15:30</span>
+                    </div>
+                    <p class="text-sm text-slate-600 card-desc">沙美老街古厝閩南四合院內的法式甜點店，新舊交融十分有格調。</p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-5')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+
+                <!-- D3 行程 6 -->
+                <div class="korean-card bg-white p-5 space-y-3" id="item-d3-6">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-blue-50 text-[#3B7AAE] text-xs font-medium px-2.5 py-1 rounded-md border border-blue-100">交通</span>
+                            <h3 class="font-bold text-base text-slate-800 card-title">返程：立榮航空</h3>
+                        </div>
+                        <span class="text-xs font-bold text-[#3B7AAE] bg-slate-50 px-2 py-1 rounded-md card-time">18:20 - 19:20</span>
+                    </div>
+                    <p class="text-sm text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 card-desc">
+                        <i class="fa-solid fa-plane-arrival text-[#3B7AAE] mr-1.5"></i><strong>B7-8962</strong> KNH 金門 ➔ RMQ 台中
+                    </p>
+                    <div class="text-right pt-1"><button onclick="checkPasswordAndEdit('item-d3-6')" class="text-xs text-[#3B7AAE] bg-[#3B7AAE]/5 px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>編輯行程</button></div>
+                </div>
+            </div>
+
+            <!-- Wear & Weather D3 -->
+            <div class="bg-[#3B7AAE]/5 border border-[#3B7AAE]/20 rounded-2xl p-4 space-y-1">
+                <div class="text-xs font-bold text-[#3B7AAE] flex items-center gap-1"><i class="fa-solid fa-shirt"></i> 貼心提醒</div>
+                <p class="text-xs text-slate-600 leading-relaxed">👗 強烈推薦白色、波西米亞風裙裝，與黃色沙牆對比極佳。✈️ 提早一小時至尚義機場報到。</p>
             </div>
         </section>
 
     </main>
 
+    <!-- Bottom Floating Nav Bar -->
     <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white/90 backdrop-blur-lg border border-slate-100 h-16 rounded-full shadow-xl z-40 flex items-center justify-around px-2">
         <a href="#day1" class="flex flex-col items-center justify-center text-[#3B7AAE]">
-            <i class="fa-solid fa-calendar-day text-lg"></i>
-            <span class="text-[10px] font-bold mt-0.5">D1·小金門</span>
+            <i class="fa-solid fa-calendar-day text-lg"></i><span class="text-[10px] font-bold mt-0.5">D1·小金門</span>
+        </a>
+        <a href="#day2" class="flex flex-col items-center justify-center text-[#3B7AAE]">
+            <i class="fa-solid fa-calendar-days text-lg"></i><span class="text-[10px] font-bold mt-0.5">D2·古寧頭</span>
+        </a>
+        <a href="#day3" class="flex flex-col items-center justify-center text-[#3B7AAE]">
+            <i class="fa-solid fa-calendar-plus text-lg"></i><span class="text-[10px] font-bold mt-0.5">D3·摩洛哥</span>
         </a>
     </nav>
 
+    <!-- 密碼驗證彈窗 -->
     <div id="passwordModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none modal-overlay p-6">
         <div class="bg-white w-full max-w-xs rounded-3xl p-5 space-y-4 shadow-2xl scale-95 modal-box text-center">
-            <div class="w-12 h-12 bg-blue-50 text-[#3B7AAE] rounded-full flex items-center justify-center mx-auto text-xl shadow-sm">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
+            <div class="w-11 h-11 bg-blue-50 text-[#3B7AAE] rounded-full flex items-center justify-center mx-auto text-lg"><i class="fa-solid fa-shield-halved"></i></div>
             <div>
-                <h3 class="text-base font-bold text-slate-800">安全密碼驗證</h3>
-                <p class="text-xs text-slate-400 mt-1">此操作受密碼保護，請輸入管理密碼</p>
+                <h3 class="text-sm font-bold text-slate-800">安全防護鎖驗證</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">調整行程請輸入生日密碼 (4碼)</p>
             </div>
-            <input type="password" id="admin-password" placeholder="請輸入4位數密碼" class="w-full text-center bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-[#3B7AAE] tracking-widest text-lg font-bold">
+            <input type="password" id="admin-password" placeholder="請輸入密碼" class="w-full text-center bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 focus:outline-none tracking-widest text-lg font-bold">
             <div class="flex gap-2 text-xs font-bold">
-                <button onclick="closePasswordModal()" class="flex-1 bg-slate-100 text-slate-500 py-2.5 rounded-xl">取消</button>
-                <button onclick="verifyPassword()" class="flex-1 bg-[#3B7AAE] text-white py-2.5 rounded-xl shadow-sm">驗證解鎖</button>
+                <button onclick="closePasswordModal()" class="flex-1 bg-slate-100 text-slate-500 py-2 rounded-xl">取消</button>
+                <button onclick="verifyPassword()" class="flex-1 bg-[#3B7AAE] text-white py-2 rounded-xl shadow-sm">驗證解鎖</button>
             </div>
         </div>
     </div>
 
+    <!-- 行程編輯視窗 -->
     <div id="editModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 flex items-end justify-center opacity-0 pointer-events-none modal-overlay p-4">
         <div class="bg-white w-full max-w-md rounded-[28px] p-5 space-y-3 shadow-2xl translate-y-full modal-box mb-2">
             <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                <h2 class="text-sm font-bold text-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-unlock text-emerald-500"></i> 行程編輯管理員模式
-                </h2>
+                <h2 class="text-sm font-bold text-slate-800"><i class="fa-solid fa-unlock text-emerald-500 mr-1"></i>行程管理員模式</h2>
                 <button onclick="closeEditModal()" class="text-slate-400 text-xl"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <input type="hidden" id="edit-item-id">
@@ -174,90 +500,114 @@
                     <input type="text" id="input-time" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 focus:outline-none">
                 </div>
                 <div>
-                    <label class="block font-bold text-slate-500 mb-0.5">📍 行程標題/地點</label>
+                    <label class="block font-bold text-slate-500 mb-0.5">📍 行程地點標題</label>
                     <input type="text" id="input-title" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 focus:outline-none">
                 </div>
                 <div>
-                    <label class="block font-bold text-slate-500 mb-0.5">📝 行程簡介內容</label>
+                    <label class="block font-bold text-slate-500 mb-0.5">📝 行程介紹內容描述</label>
                     <textarea id="input-desc" rows="3" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 focus:outline-none"></textarea>
                 </div>
             </div>
             <div class="pt-1 flex gap-2 text-xs font-bold">
-                <button onclick="closeEditModal()" class="flex-1 bg-slate-100 text-slate-600 py-2.5 rounded-lg">關閉</button>
-                <button onclick="saveItemChanges()" class="flex-1 bg-[#3B7AAE] text-white py-2.5 rounded-lg shadow-sm">儲存更新</button>
+                <button onclick="closeEditModal()" class="flex-1 bg-slate-100 text-slate-600 py-2.5 rounded-lg">取消</button>
+                <button onclick="saveItemChanges()" class="flex-1 bg-[#3B7AAE] text-white py-2.5 rounded-lg shadow-sm">確認儲存</button>
             </div>
         </div>
     </div>
 
+    <!-- 智慧記帳工具視窗 -->
     <div id="accountingModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-end justify-center opacity-0 pointer-events-none modal-overlay p-4 overflow-y-auto">
         <div class="bg-white w-full max-w-md rounded-[28px] p-5 space-y-4 shadow-2xl translate-y-full modal-box max-h-[85vh] overflow-y-auto mb-2 no-scrollbar">
             <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                <h2 class="text-sm font-bold text-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-coins text-amber-500"></i> 團隊智慧分帳工具
-                </h2>
+                <h2 class="text-sm font-bold text-slate-800 flex items-center gap-1"><i class="fa-solid fa-coins text-amber-500"></i> 團隊智慧彈性分帳</h2>
                 <button onclick="closeAccountingModal()" class="text-slate-400 text-xl"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <div class="text-center p-4 bg-slate-50 rounded-2xl border border-dashed border-slate-200 text-xs text-slate-500">
-                <p class="font-bold text-slate-700 mb-1">💡 記帳與彈性分帳功能已全面就緒</p>
-                內建 Lee, Lin, Song, Wu 專屬分帳演算法，支援不平分花費。
+
+            <!-- 新增費用表單 -->
+            <div class="bg-slate-50 p-3 rounded-2xl space-y-2 text-xs border border-slate-100">
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="bill-title" placeholder="消費項目(如：廣東粥)" class="w-full bg-white border border-slate-200 rounded-lg px-2 py-2 focus:outline-none">
+                    <input type="number" id="bill-amount" placeholder="消費總金額" class="w-full bg-white border border-slate-200 rounded-lg px-2 py-2 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-2 items-center">
+                    <div>
+                        <span class="text-[10px] text-slate-400 block mb-0.5">幫忙代墊者</span>
+                        <select id="bill-payer" class="w-full bg-white border border-slate-200 rounded-md px-1.5 py-1.5">
+                            <option value="Lee">Lee</option><option value="Lin">Lin</option><option value="Song">Song</option><option value="Wu">Wu</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-slate-400 block mb-0.5">誰參與分攤？</span>
+                        <div class="flex justify-between bg-white px-2 py-1.5 border border-slate-200 rounded-md text-[10px]">
+                            <label><input type="checkbox" name="bill-sharer" value="Lee" checked> Le</label>
+                            <label><input type="checkbox" name="bill-sharer" value="Lin" checked> Li</label>
+                            <label><input type="checkbox" name="bill-sharer" value="Song" checked> So</label>
+                            <label><input type="checkbox" name="bill-sharer" value="Wu" checked> Wu</label>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="addBillItem()" class="w-full bg-[#3B7AAE] text-white font-bold py-2 rounded-lg">新增此筆花費</button>
             </div>
-            <button onclick="copyToLineDemo()" class="w-full bg-[#06C755] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-xs shadow-sm">
-                <i class="fa-brands fa-line text-lg"></i> 複製 LINE 分帳報告文字
+
+            <!-- 流水帳 -->
+            <div class="space-y-1">
+                <div class="text-xs font-bold text-slate-400 flex justify-between"><span>📋 流水帳細目</span><button onclick="clearAllBills()" class="text-red-500 text-[10px]">清空</button></div>
+                <div id="bill-list-container" class="max-h-24 overflow-y-auto border border-slate-100 rounded-xl p-2 bg-white text-[11px] space-y-1 no-scrollbar"></div>
+            </div>
+
+            <!-- 數據統計 -->
+            <div class="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-xs">
+                <table class="w-full text-center">
+                    <thead><tr class="text-slate-400 border-b border-slate-200"><th class="pb-1">成員</th><th class="pb-1">墊款</th><th class="pb-1">應付</th><th class="pb-1">最終收付結果</th></tr></thead>
+                    <tbody id="balance-table-body" class="font-bold"></tbody>
+                </table>
+            </div>
+
+            <!-- LINE 按鈕 -->
+            <button onclick="copyToLine()" class="w-full bg-[#06C755] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-1 shadow-md text-xs">
+                <i class="fa-brands fa-line text-lg"></i> 複製 LINE 完整分帳結算報告
             </button>
         </div>
     </div>
 
+    <!-- ==================== LOGIC CODE ==================== -->
     <script>
-        const CORRECT_PASSWORD = "0818"; // 您指定的防護密碼
-        let currentPendingItemId = null; // 暫存目前想編輯的卡片 ID
+        const CORRECT_PASSWORD = "0818";
+        let currentPendingItemId = null;
 
-        // 點擊編輯按鈕：第一步先彈出密碼視窗
+        let bills = [
+            { title: "首日大金門租車費", amount: 2600, payer: "Lee", sharers: ["Lee", "Lin", "Song", "Wu"] },
+            { title: "膩咖啡下午茶(Wu沒到)", amount: 800, payer: "Lin", sharers: ["Lee", "Lin", "Song"] }
+        ];
+        const members = ["Lee", "Lin", "Song", "Wu"];
+
         function checkPasswordAndEdit(itemId) {
             currentPendingItemId = itemId;
-            document.getElementById('admin-password').value = ""; // 清空
-            
+            document.getElementById('admin-password').value = "";
             const modal = document.getElementById('passwordModal');
             modal.classList.remove('opacity-0', 'pointer-events-none');
             modal.querySelector('.modal-box').classList.remove('scale-95');
-            document.getElementById('admin-password').focus();
         }
 
         function closePasswordModal() {
-            const modal = document.getElementById('passwordModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-box').classList.add('scale-95');
-            currentPendingItemId = null;
+            document.getElementById('passwordModal').classList.add('opacity-0', 'pointer-events-none');
         }
 
-        // 第二步：驗證密碼
         function verifyPassword() {
-            const userInput = document.getElementById('admin-password').value.trim();
-            
-            if (userInput === CORRECT_PASSWORD) {
-                // 驗證成功：關閉密碼視窗，順暢開啟真正的編輯視窗
+            if (document.getElementById('admin-password').value.trim() === CORRECT_PASSWORD) {
                 closePasswordModal();
-                if (currentPendingItemId) {
-                    openActualEditModal(currentPendingItemId);
-                }
+                if (currentPendingItemId) openActualEditModal(currentPendingItemId);
             } else {
-                alert("❌ 密碼錯誤！無法開啟編輯模式唷。");
-                document.getElementById('admin-password').value = "";
-                document.getElementById('admin-password').focus();
+                alert("❌ 密碼錯誤！無法開啟修改功能。");
             }
         }
 
-        // 密碼通過，正式開啟編輯視窗並載入文字
         function openActualEditModal(itemId) {
             const card = document.getElementById(itemId);
             document.getElementById('edit-item-id').value = itemId;
-
-            const time = card.querySelector('.card-time') ? card.querySelector('.card-time').innerText : '';
-            const title = card.querySelector('.card-title') ? card.querySelector('.card-title').innerText : '';
-            const desc = card.querySelector('.card-desc') ? card.querySelector('.card-desc').innerText.trim() : '';
-
-            document.getElementById('input-time').value = time;
-            document.getElementById('input-title').value = title;
-            document.getElementById('input-desc').value = desc;
+            document.getElementById('input-time').value = card.querySelector('.card-time') ? card.querySelector('.card-time').innerText : '';
+            document.getElementById('input-title').value = card.querySelector('.card-title') ? card.querySelector('.card-title').innerText : '';
+            document.getElementById('input-desc').value = card.querySelector('.card-desc') ? card.querySelector('.card-desc').innerText.trim() : '';
 
             const modal = document.getElementById('editModal');
             modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -265,46 +615,94 @@
         }
 
         function closeEditModal() {
-            const modal = document.getElementById('editModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-box').classList.add('translate-y-full');
+            document.getElementById('editModal').classList.add('opacity-0', 'pointer-events-none');
         }
 
-        // 儲存更新修改
         function saveItemChanges() {
             const itemId = document.getElementById('edit-item-id').value;
             const card = document.getElementById(itemId);
-
-            const newTime = document.getElementById('input-time').value;
-            const newTitle = document.getElementById('input-title').value;
-            const newDesc = document.getElementById('input-desc').value;
-
-            if(card.querySelector('.card-time')) card.querySelector('.card-time').innerText = newTime;
-            if(card.querySelector('.card-title')) card.querySelector('.card-title').innerText = newTitle;
-            if(card.querySelector('.card-desc')) card.querySelector('.card-desc').innerText = newDesc;
-
+            if(card.querySelector('.card-time')) card.querySelector('.card-time').innerText = document.getElementById('input-time').value;
+            if(card.querySelector('.card-title')) card.querySelector('.card-title').innerText = document.getElementById('input-title').value;
+            if(card.querySelector('.card-desc')) card.querySelector('.card-desc').innerText = document.getElementById('input-desc').value;
             closeEditModal();
-            
-            // 成功儲存後的亮藍色反饋效果
-            card.classList.add('bg-blue-50/70', 'scale-[1.01]');
-            setTimeout(() => card.classList.remove('bg-blue-50/70', 'scale-[1.01]'), 400);
         }
 
-        // 記帳視窗開關
         function openAccountingModal() {
-            const modal = document.getElementById('accountingModal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-box').classList.remove('translate-y-full');
-        }
-        function closeAccountingModal() {
-            const modal = document.getElementById('accountingModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-box').classList.add('translate-y-full');
+            document.getElementById('accountingModal').classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('accountingModal').querySelector('.modal-box').classList.remove('translate-y-full');
+            calculateDebts();
         }
 
-        function copyToLineDemo() {
-            const demoText = "✈️【金門假期 分帳報告】✈️\n• 首日租車費：$2400 (Lee 墊)\n• 咖啡廳下午茶：$600 (Lin 墊)\n\n📊 最終結算：\n🟢 Lee：應收回 +$1400\n🔴 Wu：應付出 -$800\n🟢 Lin：應收回 +$200\n🔴 Song：應付出 -$800";
-            navigator.clipboard.writeText(demoText).then(() => alert("🎉 分帳報告已複製到剪貼簿！"));
+        function closeAccountingModal() {
+            document.getElementById('accountingModal').classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function addBillItem() {
+            const title = document.getElementById('bill-title').value.trim();
+            const amount = parseFloat(document.getElementById('bill-amount').value);
+            const payer = document.getElementById('bill-payer').value;
+            const checkboxes = document.querySelectorAll('input[name="bill-sharer"]:checked');
+            let sharers = [];
+            checkboxes.forEach(cb => sharers.push(cb.value));
+
+            if (!title || isNaN(amount) || amount <= 0 || sharers.length === 0) {
+                alert("請填寫正確項目、金額並勾選參與分攤人！");
+                return;
+            }
+            bills.push({ title, amount, payer, sharers });
+            document.getElementById('bill-title').value = "";
+            document.getElementById('bill-amount').value = "";
+            calculateDebts();
+        }
+
+        function clearAllBills() {
+            if(confirm("確定重設帳目？")) { bills = []; calculateDebts(); }
+        }
+
+        function calculateDebts() {
+            let paidSum = { Lee: 0, Lin: 0, Song: 0, Wu: 0 };
+            let oweSum = { Lee: 0, Lin: 0, Song: 0, Wu: 0 };
+
+            const container = document.getElementById('bill-list-container');
+            if(bills.length===0) {
+                container.innerHTML = `<p class="text-slate-400 text-center py-2">目前沒有任何帳目明細</p>`;
+            } else {
+                container.innerHTML = bills.map(b => {
+                    paidSum[b.payer] += b.amount;
+                    b.sharers.forEach(s => oweSum[s] += (b.amount / b.sharers.length));
+                    return `<div class="flex justify-between bg-slate-50 p-1.5 rounded-lg border">
+                        <span><strong>${b.title}</strong> (由 ${b.payer} 墊 / 分攤: ${b.sharers.join(',')})</span>
+                        <span class="text-[#3B7AAE]">$${b.amount}</span>
+                    </div>`;
+                }).join('');
+            }
+
+            document.getElementById('balance-table-body').innerHTML = members.map(m => {
+                const net = paidSum[m] - oweSum[m];
+                let text = net > 0 ? `應收 +$${Math.round(net)}` : (net < 0 ? `應付 -$${Math.abs(Math.round(net))}` : "已平帳");
+                let cls = net > 0 ? "text-emerald-600" : (net < 0 ? "text-red-500" : "text-slate-400");
+                return `<tr class="border-b"><td class="py-1.5">${m}</td><td>$${Math.round(paidSum[m])}</td><td>$${Math.round(oweSum[m])}</td><td class="${cls}">${text}</td></tr>`;
+            }).join('');
+        }
+
+        function copyToLine() {
+            if(bills.length === 0) { alert("無明細可複製！"); return; }
+            let paidSum = { Lee: 0, Lin: 0, Song: 0, Wu: 0 };
+            let oweSum = { Lee: 0, Lin: 0, Song: 0, Wu: 0 };
+            let txt = "✈️【金門旅行 團隊智慧分帳報告】✈️\n\n📝『流水帳細目』：\n";
+            bills.forEach(b => {
+                paidSum[b.payer] += b.amount;
+                b.sharers.forEach(s => oweSum[s] += (b.amount / b.sharers.length));
+                txt += `• ${b.title}：$${b.amount} (由 ${b.payer} 墊 / 分攤: ${b.sharers.join(', ')})\n`;
+            });
+            txt += "\n📊『最終應收應付結果』：\n";
+            members.forEach(m => {
+                const net = paidSum[m] - oweSum[m];
+                txt += net > 0 ? ` 🟢 ${m}：應收回 +$${Math.round(net)}\n` : (net < 0 ? ` 🔴 ${m}：應付出 -$${Math.abs(Math.round(net))}\n` : ` ⚪ ${m}：已平帳\n`);
+            });
+            txt += "\n請大家確認帳目後，主動聯繫夥伴處理轉帳事宜唷！謝謝大家！🙏";
+
+            navigator.clipboard.writeText(txt).then(() => alert("🎉 LINE 分帳結算報告文字已成功複製到您的剪貼簿！"));
         }
     </script>
 </body>
